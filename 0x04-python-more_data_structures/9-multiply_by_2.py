@@ -12,4 +12,4 @@ def multiply_by_2(a_dictionary):
         Multiply the value by 2 and add it to the new dictionary
         """
         new_dictionary.update({key: (value * 2)})
-    return new_dictionar
+    return new_dictionary
