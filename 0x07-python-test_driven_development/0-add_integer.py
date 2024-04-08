@@ -13,15 +13,19 @@ def add_integer(a, b=98):
         TypeError: if a, b are not int, float.
 
     Returns:
-        The sum of the two integers.
+        The sum of the two integer.
     """
-
-    if type(a) not in (int, float):
+    if type(a) is not int and type(a) is not float:
         raise TypeError('a must be an integer')
-    if type(b) not in (int, float):
+    if type(b) is not int and type(b) is not float:
         raise TypeError('b must be an integer')
-    return int(a) + int(b)
+    if a != a:
+        raise TypeError('a must be an integer')
+    if b != b:
+        raise TypeError('a must be an integer')
+    if type(a) is float:
+        a = int(a)
+    if type(b) is float:
+        b = int(b)
 
-if __name__ == "__main__":
-    import doctest
-    doctest.testfile("tests/0-add_integer.txt")
+    return (a + b)
